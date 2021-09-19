@@ -27,9 +27,9 @@ jobs:
       - name: Hello LikeLion
         run: echo Hello LikeLion!!!!!!!
 
-      - name: 디스코드 깃헙 푸시 알리미
+      - name: Discord notification
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         uses: Ilshidur/action-discord@0.3.2
         with:
-          args: 'The project {{ EVENT_PAYLOAD.repository.full_name }} has been deployed!!!!!!'
+          args: 'The project {{ EVENT_PAYLOAD.repository.full_name }} has been deployed!!!!!! 성공했습니다~'
